@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row x-center">
+        <div class="col-6">
+            <div class="details">
+                <div class="details-link">
+                    <a class="btn btn-warning" href="/update/<%= details._id  %>">Update  &rarr; </a> &nbsp;&nbsp;
+                    <form style="display: inline-block;"  action="/delete" method="POST">
+                        <input type="hidden" name="deleteID" value="<%= details._id %>">
+                        <input type="submit" value="delete" class="btn btn-danger" >
+                    </form>
+                </div>
+                <div class="details-title">
+                    <h4>
+
+                    <%= details.title %>
+                    </h4>
+
+                </div>
+                <div class="details-img">
+                    <img src="/assets/img/<%= details.image %>" alt="Post img">
+                </div>
+                <div class="details-p">
+                    <p><%= details.body %></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
